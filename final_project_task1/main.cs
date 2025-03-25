@@ -122,7 +122,15 @@ class Program
                     Console.Write("Enter word: ");
                     string searchWord = Console.ReadLine();
                     var translations = currentDictionary.FindTranslation(searchWord);
-                    Console.WriteLine("Translations: " + string.Join(", ", translations));
+
+                    if (translations.Count == 0 || translations.Contains("Translation not found"))
+                    {
+                        Console.WriteLine("No translation found for this word.");
+                    }
+                    else
+                    {
+                        Console.WriteLine("Translations: " + string.Join(", ", translations));
+                    }
                     break;
                 case "7":
                     return;

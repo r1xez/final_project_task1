@@ -4,7 +4,7 @@ using System.Collections.Generic;
 public class DictionaryData
 {
     public string Name { get; set; }
-    public string Type { get; set; }  // Dictionary type (e.g., "Ukr-Eng")
+    public string Type { get; set; }  
     public Dictionary<string, List<string>> Words { get; set; } = new();
 
     public void AddWord(string word, string translation)

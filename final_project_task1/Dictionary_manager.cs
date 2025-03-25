@@ -20,7 +20,7 @@ public static class DictionaryManager
         string filePath = Path.Combine(folderPath, dictionary.Name + ".txt");
         using (StreamWriter writer = new StreamWriter(filePath))
         {
-            writer.WriteLine($"Type:{dictionary.Type}");  // Save dictionary type
+            writer.WriteLine($"Type:{dictionary.Type}"); 
             foreach (var entry in dictionary.Words)
             {
                 string translations = string.Join(",", entry.Value);
